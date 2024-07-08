@@ -77,4 +77,31 @@ const animals = ['horse', 'dog', 'fish', 'cat', 'bird'];
 
 const [,animal1,dfgfgfd,animal2] = animals
 
-console.log(animal1,animal2,dfgfgfd)
+console.log(animal1, animal2, dfgfgfd)
+
+
+
+//! --------------Rest/Spread
+
+
+const NumsArray = [1, 2, 3, 4,5,6]
+
+const [fisrtNumber, ...CopyArray] = NumsArray
+
+console.log(CopyArray)
+const NewArray = ["Hello",...NumsArray]
+console.log(NewArray)
+
+
+function TernaryOperator(num) {
+    if (5 < num) {
+        return "This is the Right Answer"
+    } else {
+        return "This is the Wrong Answer"
+    }
+}
+
+
+const TernaryOperatorES6 = num =>  5 < num  ? "This is the Right Answer" : "This is the Wrong Answer"
+
+console.log(TernaryOperatorES6(65)) 

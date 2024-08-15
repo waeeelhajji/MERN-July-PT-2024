@@ -1,6 +1,6 @@
 
 import './App.css';
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route, Link } from "react-router-dom"
 import Main from "./components/Main"
 import OneMovie from "./components/OneMovie"
 import Create from "./components/Create"
@@ -10,6 +10,9 @@ function App() {
   return (
     <div className="App">
       <h1>Movies 🍿🎥🎞️</h1>
+      <Link to="/movies/create">ADD Movie ➕</Link>
+      <Link to="/">All Movies 🎞️</Link>
+
       <Routes>
         {/* DASHBOARD */}
         <Route path='/' element={<Main />} />

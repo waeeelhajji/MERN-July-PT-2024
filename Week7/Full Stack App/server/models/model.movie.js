@@ -5,7 +5,7 @@ const mongoose = require("mongoose")
 const MovieSchema = new mongoose.Schema({
     title: {
         type: String,
-        required: [true, "{PATH} is requires"],
+        required: [true, "{PATH} is required"],
         minLength: [2, "{PATH} must have at least 2 chars"]
     },
     image: {
@@ -13,7 +13,7 @@ const MovieSchema = new mongoose.Schema({
     },
     releaseYear: {
         type: Number,
-        required: [true, "{PATH} is requires"],
+        required: [true, "{PATH} is required"],
         min: [1888, "{PATH} must be valid"]
     },
     seen: {

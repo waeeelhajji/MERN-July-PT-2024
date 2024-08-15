@@ -10,7 +10,7 @@ module.exports.findALLMovies = (req, res) => {
             res.json(AllMovies)
         })
         .catch(err => {
-            res.json(err)
+            res.status(400).json(err)
         })
 }
 
@@ -21,7 +21,7 @@ module.exports.findOneSingleMovie = (req, res) => {
             res.json(oneSingleMovie)
         })
         .catch((err) => {
-            res.json(err)
+            res.status(400).json(err)
         });
 }
 //? CREATE
@@ -31,7 +31,7 @@ module.exports.createNewMovie = (req, res) => {
             res.json({ movie: newlyCreatedMovie })
         })
         .catch((err) => {
-            res.json(err)
+            res.status(400).json(err)
         });
 }
 
@@ -45,7 +45,7 @@ module.exports.updateExistingMovie = (req, res) => {
             res.json({ movie: updatedMovie })
         })
         .catch((err) => {
-            res.json(err)
+            res.status(400).json(err)
         });
 }
 
@@ -55,6 +55,6 @@ module.exports.deleteAnExistingMovie = (req, res) => {
             res.json({ result: result })
         })
         .catch((err) => {
-            res.json(err)
+            res.status(400).json(err)
         });
 }
